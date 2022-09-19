@@ -23,8 +23,6 @@ async function viewEvent() {
         getEvent.innerHTML += cardEv
             
         });
-
-
     } catch (error) {
         console.log("ta dando pau no eventos " + error)
     }
