@@ -20,7 +20,7 @@ async function cadEvent(){
             method: "POST",
             body: JSON.stringify(newEvent),
             Headers: { 
-                "Content-Type": "application/json; charset=UTF-8",
+                "Content-Type": "application/json"
             },
             
             
