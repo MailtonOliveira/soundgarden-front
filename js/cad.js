@@ -1,17 +1,17 @@
 
 async function cadEvent(){
     try{
-        const newForm = document.querySelectorAll(".col-6");
+        const newForm = document.querySelector(".col-6");
 
         const newEvent = {
-            name: "name",
-            poster: "link da imagem",
-            attractions: [
+            "name":"nometeste",
+            "poster": "link da imagem",
+            "attractions": [
                 "atracoes"
             ],
-            description: "descricao",
-            scheduled: "2022-09-18T22:00:00.000Z",
-            number_tickets: 10
+            "description": "descricao",
+            "scheduled": "2022-09-18T22:00:00.000Z",
+            "number_tickets": 10
         }; console.log(newEvent)
            
         
