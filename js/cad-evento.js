@@ -19,11 +19,8 @@ async function cadEvent(event){
             "description": inpDescricao.value,
             "scheduled": new Date(inpData.value).toISOString(),
             "number_tickets": inpTickets.value,
-        }; console.log(newEvent)
-        
-
-           
-        
+        }; console.log(newEvent) 
+  
         
         const response = await fetch("https://xp41-soundgarden-api.herokuapp.com/events", {
             method: "POST",
