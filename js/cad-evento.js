@@ -13,12 +13,12 @@ async function cadEvent(event){
         console.log(inpData.value)
 
         const newEvent = {
-            name:inpNome.value,
-            poster: "link da imagem",
-            attractions:inpAtracoes.value.split(","),
-            description: inpDescricao.value,
-            scheduled: new Date(inpData.value),
-            number_tickets: 10
+            "name": `\"${inpNome.value}\"`,
+            "poster": "link da imagem",
+            "attractions":inpAtracoes.value.split(","),
+            "description": inpDescricao.value,
+            "scheduled": new Date(inpData.value).toISOString(),
+            "number_tickets": inpTickets.value,
         }; console.log(newEvent)
         
 
@@ -27,10 +27,10 @@ async function cadEvent(event){
         
         const response = await fetch("https://xp41-soundgarden-api.herokuapp.com/events", {
             method: "POST",
-            body: JSON.stringify(newEvent),
-            Headers: { 
+            headers: { 
                 "Content-Type": "application/json"
             },
+            body: JSON.stringify(newEvent),
             
         });
         console.log(response)
