@@ -13,7 +13,7 @@ async function cadEvent(event){
         console.log(inpData.value)
 
         const newEvent = {
-            "name": `\"${inpNome.value}\"`,
+            "name": inpNome.value,
             "poster": "link da imagem",
             "attractions":inpAtracoes.value.split(","),
             "description": inpDescricao.value,
