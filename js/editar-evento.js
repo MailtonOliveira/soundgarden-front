@@ -1,1 +1,0 @@
-const viewEvent = document.querySelector()

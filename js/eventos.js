@@ -1,3 +1,4 @@
+
 const getEvent = document.querySelector(".container d-flex justify-content-center align-items-center flex-wrap");
 
 async function viewEvent() {
