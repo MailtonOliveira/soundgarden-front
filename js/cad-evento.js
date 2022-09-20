@@ -11,22 +11,18 @@ async function cadEvent(event){
     event.preventDefault();
     try{      
         console.log(inpNome.value)
+
         const newEvent = {
-            "\"name\"":inpNome.value,
+            name:inpNome.value,
             poster: "link da imagem",
-            "attractions": [
-            "atracoes"
-            ],
-            "description": "descricao",
-            "scheduled": "2022-09-18T22:00:00.000Z",
-            "number_tickets": 10
+            attractions:inpAtracoes.value.split(","),
+            description: inpDescricao.value,
+            scheduled: "2022-09-18T22:00:00.000Z",
+            number_tickets: 10
         }; console.log(newEvent)
         
-<<<<<<< HEAD
 
            
-=======
->>>>>>> 35297a094f2ac1c198e0c6517796a9b7499ae869
         
         
         const response = await fetch("https://xp41-soundgarden-api.herokuapp.com/events", {
