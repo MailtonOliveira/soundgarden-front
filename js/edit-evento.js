@@ -39,13 +39,45 @@ async function viewEvent(){
 
         
     } catch (error) {
-        console.log("ta dando pau " + error)
-
-        
+        console.log("ta dando pau " + error)        
     }
+    
 }
 viewEvent();
 
-newForm.onsubmit = (event) => {
+newForm.onsubmit = async (event) => {
     event.preventDefault();
+
+    try {
+
+        const newEvent = {
+            "name": inpNome.value,
+            "poster": inpImg.value,
+            "attractions":inpAtracoes.value.split(","),
+            "description": inpDescricao.value,
+            "scheduled": new Date(inpData.value).toISOString(),
+            "number_tickets": inpTickets.value,
+        }; console.log(newEvent)
+    
+    const responseEdit = await fetch(`https://xp41-soundgarden-api.herokuapp.com/events/${idUrl}`,{
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newEvent),
+        redirect: 'follow'
+    
+    });
+    console.log(responseEdit);
+    alert("Editato com Sucesso!")
+    window.location.href = "admin.html";
+        
+    } catch (error) {
+        console.log("Ta dando pau " + error)
+
+        
+    }
+    
 }
+
+
