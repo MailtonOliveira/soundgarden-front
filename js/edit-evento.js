@@ -27,6 +27,7 @@ async function viewEvent(){
             }   
             });
             const data = await response.json();
+            
             console.log(data)
             editName.value = data.name;
             editImg.value = data.poster;
