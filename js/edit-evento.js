@@ -35,6 +35,8 @@ async function viewEvent(){
             editData.value = data.scheduled;
             editTickets.value = data.number_tickets;
 
+            console.log(response)
+
         
     } catch (error) {
         console.log("ta dando pau " + error)
