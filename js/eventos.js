@@ -28,6 +28,23 @@ async function viewEvent() {
         console.log("ta dando pau no eventos " + error)
     }
 
-    
+    const newEvent = {
+        "name": inpNome.value,
+        "poster": inpImg.value,
+        "attractions":inpAtracoes.value.split(","),
+        "description": inpDescricao.value,
+        "scheduled": new Date(inpData.value).toISOString(),
+        "number_tickets": inpTickets.value,
+    }; console.log(newEvent)
+
+const responseEdit = await fetch(`https://xp41-soundgarden-api.herokuapp.com/events/${idUrl}`,{
+    method: "PUT",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newEvent),
+    redirect: 'follow'
+
+});
 }
 viewEvent() 
