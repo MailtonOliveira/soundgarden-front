@@ -74,8 +74,7 @@ newForm.onsubmit = async (event) => {
         
     } catch (error) {
         console.log("Ta dando pau " + error)
-
-        
+        alert("Não foi possível editar!")        
     }
     
 }
