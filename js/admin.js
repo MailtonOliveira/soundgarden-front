@@ -23,7 +23,7 @@ async function listEvents(event) {
             <td>
                 <a href="reservas.html" class="btn btn-dark">ver reservas</a>
                 <a href="editar-evento.html?id=${event._id}" class="btn btn-secondary">editar</a>
-                <a href="excluir-evento?id=${event._id}.html" class="btn btn-danger">excluir</a>
+                <a href="excluir-evento.html?id=${event._id}.html" class="btn btn-danger">excluir</a>
             </td>
         </tr>`;
 
