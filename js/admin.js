@@ -10,7 +10,7 @@ async function listEvents(event) {
                 "Content-Type": "application/json"
             }            
         });
-        const data = response.json();
+        const data = await response.json();
 
         const btEvento = document.querySelector("tbody")
 
