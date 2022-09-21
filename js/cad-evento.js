@@ -1,4 +1,5 @@
 const inpNome = document.querySelector("#nome");
+const inpImg = document.querySelector("#banner")
 const inpAtracoes = document.querySelector("#atracoes");
 const inpDescricao = document.querySelector("#descricao");
 const inpData = document.querySelector("#data");
@@ -7,14 +8,14 @@ const newForm = document.querySelector(".col-6");
 
 newForm.addEventListener("submit", cadEvent)
 
-async function cadEvent(event){
-    event.preventDefault();
+async function cadEvent(){
+
     try{      
         console.log(inpData.value)
 
         const newEvent = {
             "name": inpNome.value,
-            "poster": "link da imagem",
+            "poster": inpImg.value,
             "attractions":inpAtracoes.value.split(","),
             "description": inpDescricao.value,
             "scheduled": new Date(inpData.value).toISOString(),
