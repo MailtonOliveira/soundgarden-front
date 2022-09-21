@@ -14,16 +14,16 @@ async function listEvents(event) {
 
         const btEvento = document.querySelector("tbody")
 
-        data.articles.forEach((element) => {
+        data.forEach((event) => {
         const html = `<tr>
             <th scope="row">1</th>
-            <td>${element.scheduled}</td>
-            <td>${article.name}</td>
-            <td>${article.attractions}</td>
+            <td>${event.scheduled}</td>
+            <td>${event.name}</td>
+            <td>${event.attractions}</td>
             <td>
                 <a href="reservas.html" class="btn btn-dark">ver reservas</a>
-                <a href="editar-evento.html?id=${article._id}" class="btn btn-secondary">editar</a>
-                <a href="excluir-evento?id=${article._id}.html" class="btn btn-danger">excluir</a>
+                <a href="editar-evento.html?id=${event._id}" class="btn btn-secondary">editar</a>
+                <a href="excluir-evento?id=${event._id}.html" class="btn btn-danger">excluir</a>
             </td>
         </tr>`;
 
