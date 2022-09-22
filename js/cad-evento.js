@@ -6,10 +6,10 @@ const inpData = document.querySelector("#data");
 const inpTickets = document.querySelector("#lotacao");
 const newForm = document.querySelector(".col-6");
 
-// newForm.addEventListener("submit", cadEvent)
+newForm.addEventListener("submit", cadEvent)
 
-newForm.onsubmit = async () => {
-    // event.preventDefault();
+async function cadEvent(event){
+    event.preventDefault()
 
     try{      
         console.log(inpData.value)
@@ -21,7 +21,7 @@ newForm.onsubmit = async () => {
             "description": inpDescricao.value,
             "scheduled": new Date(inpData.value).toISOString(),
             "number_tickets": inpTickets.value,
-        }; console.log(newEvent) 
+        };
   
         
         const response = await fetch("https://xp41-soundgarden-api.herokuapp.com/events", {
@@ -34,9 +34,13 @@ newForm.onsubmit = async () => {
             
         });
         console.log(response)
+        alert("Criado com Sucesso!")
+        window.location.href = ("cadastro-evento.html")
     
     }catch (error){
     console.log("ta dando pau no cadastro " + error)
+    alert("Favor preencher todos os campos")
     };
     
 }
+
