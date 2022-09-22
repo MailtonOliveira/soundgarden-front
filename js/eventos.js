@@ -13,7 +13,7 @@ async function viewEvent() {
         const data = await response.json()
         console.log(data)
         
-        const clEvento = document.querySelector(".container d-flex justify-content-center align-items-center flex-wrap")
+        const clEvento = document.querySelectorAll("class.container d-flex justify-content-center align-items-center flex-wrap")
 
         data.forEach((event) => {
             const cardEv = `<article class="evento card p-5 m-3">
