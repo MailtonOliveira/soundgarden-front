@@ -6,9 +6,10 @@ const inpData = document.querySelector("#data");
 const inpTickets = document.querySelector("#lotacao");
 const newForm = document.querySelector(".col-6");
 
-newForm.addEventListener("submit", cadEvent)
+// newForm.addEventListener("submit", cadEvent)
 
-async function cadEvent(){
+newForm.onsubmit = async () => {
+    // event.preventDefault();
 
     try{      
         console.log(inpData.value)
