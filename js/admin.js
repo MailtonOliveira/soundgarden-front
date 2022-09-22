@@ -8,7 +8,9 @@ async function listEvents(event) {
         const response = await fetch("https://xp41-soundgarden-api.herokuapp.com/events", {
             headers: {
                 "Content-Type": "application/json"
-            }            
+            },
+            redirect: 'follow'       
+
         });
         const data = await response.json();
 

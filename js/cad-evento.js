@@ -28,6 +28,7 @@ async function cadEvent(){
             headers: { 
                 "Content-Type": "application/json"
             },
+            redirect: 'follow',
             body: JSON.stringify(newEvent),
             
         });

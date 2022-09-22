@@ -23,7 +23,8 @@ async function viewEvent(){
         const response = await fetch(`https://xp41-soundgarden-api.herokuapp.com/events/${idUrl}`, {
             headers: {
                 "Content-Type": "application/json"
-            }   
+            }, 
+            redirect: 'follow'
             });
             const data = await response.json();
 
@@ -57,7 +58,7 @@ newForm.onsubmit = async (event) => {
         redirect: 'follow'
     
     });
-    
+
     alert("Apagado com sucesso!")
     window.location.href = "admin.html";
         
