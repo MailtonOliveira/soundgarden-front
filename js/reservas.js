@@ -21,7 +21,7 @@ async function listReservas(event) {
             <td>${event.owner_email}</td>
             <td>${event.number_tickets}</td>
             <td>
-                <a href="editar.html?id=${event._id}" class="btn btn-secondary">editar</a>
+                <a href="editar-reserva.html?id=${event._id}" class="btn btn-secondary">editar</a>
                 <a href="excluir.html?id=${event._id}" class="btn btn-danger">excluir</a>
             </td>
         </tr>`;
