@@ -79,5 +79,3 @@ newForm.onsubmit = async (event) => {
     }
     
 }
-
-

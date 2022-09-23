@@ -34,10 +34,7 @@ async function listEvents(event) {
             
         });
 
-
         
-
-
         
     } catch (error) {
         console.log("Ta dando pau " + error)
