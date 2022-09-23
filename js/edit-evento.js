@@ -33,7 +33,7 @@ async function viewEvent(){
             editImg.value = data.poster;
             editAtracoes.value = data.attractions;
             editDescricao.value = data.description;
-            editData.value = data.scheduled;
+            editData.value = new Date(data.scheduled).toISOString().slice(0,-1);
             editTickets.value = data.number_tickets;
 
             console.log(response)
@@ -79,5 +79,3 @@ newForm.onsubmit = async (event) => {
     }
     
 }
-
-

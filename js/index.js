@@ -11,7 +11,7 @@ async function viewEvent() {
         })
         
         const data = await response.json()
-        console.log(data)
+        // console.log(data)
         const eventoIndex = data.slice(0,3);
 
         const clIndex = document.querySelector(".container.d-flex.justify-content-center.align-items-center")
@@ -19,12 +19,12 @@ async function viewEvent() {
         eventoIndex.forEach((event) => {
 
             const cardIndex = `<article class="evento card p-5 m-3">
-            <h2>${event.name}</h2>
+            <h2>${event.name} - ${new Date (event.scheduled).toLocaleDateString()}</h2>
             <h4>${event.attractions}</h4>
             <p>${event.description}</p>
             <a href="#" class="btn btn-primary">reservar ingresso</a>
         </article>`;
-        console.log(clIndex)
+        // console.log(clIndex)
 
         clIndex.innerHTML += cardIndex
         
@@ -39,3 +39,4 @@ async function viewEvent() {
 
 }
 viewEvent() 
+

@@ -19,7 +19,7 @@ async function listEvents(event) {
         data.forEach((event) => {
         const html = `<tr>
             <th scope="row">1</th>
-            <td>${event.scheduled}</td>
+            <td>${new Date (event.scheduled).toLocaleDateString()}</td>
             <td>${event.name}</td>
             <td>${event.attractions}</td>
             <td>
@@ -30,14 +30,11 @@ async function listEvents(event) {
         </tr>`;
 
         btEvento.innerHTML += html
-        console.log(html)
+        // console.log(html)
             
         });
 
-
         
-
-
         
     } catch (error) {
         console.log("Ta dando pau " + error)
