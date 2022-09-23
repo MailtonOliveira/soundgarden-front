@@ -27,7 +27,7 @@ async function listReservas(event) {
         </tr>`;
 
         btReservas.innerHTML += html
-        console.log(html)
+        // console.log(html)
             
         });   
 
