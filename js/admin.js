@@ -30,7 +30,7 @@ async function listEvents(event) {
         </tr>`;
 
         btEvento.innerHTML += html
-        console.log(html)
+        // console.log(html)
             
         });
 

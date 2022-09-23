@@ -11,7 +11,7 @@ async function viewEvent() {
         })
         
         const data = await response.json()
-        console.log(data)
+        // console.log(data)
         
         const clEvento = document.querySelector(".container.d-flex.justify-content-center.align-items-center.flex-wrap")
 
@@ -22,7 +22,6 @@ async function viewEvent() {
             <p>${event.description}</p>
             <a href="#" class="btn btn-primary">reservar ingresso</a>
         </article>`;
-        console.log(clEvento)
 
         clEvento.innerHTML += cardEv
         

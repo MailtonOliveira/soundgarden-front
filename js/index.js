@@ -19,7 +19,7 @@ async function viewEvent() {
         eventoIndex.forEach((event) => {
 
             const cardIndex = `<article class="evento card p-5 m-3">
-            <h2>${event.name}</h2>
+            <h2>${event.name} - ${event.scheduled}</h2>
             <h4>${event.attractions}</h4>
             <p>${event.description}</p>
             <a href="#" class="btn btn-primary">reservar ingresso</a>
@@ -39,3 +39,4 @@ async function viewEvent() {
 
 }
 viewEvent() 
+
