@@ -4,6 +4,7 @@ const inpAtracoes = document.querySelector("#atracoes");
 const inpDescricao = document.querySelector("#descricao");
 const inpData = document.querySelector("#data");
 const inpTickets = document.querySelector("#lotacao");
+const inpEmail = document.querySelector("#email");
 
 const newForm = document.querySelector(".col-6");
 
@@ -13,6 +14,7 @@ const editAtracoes = document.querySelector("#atracoes");
 const editDescricao = document.querySelector("#descricao");
 const editData = document.querySelector("#data");
 const editTickets = document.querySelector("#lotacao");
+const editEmail = document.querySelector("#email");
 
 const Url = new URLSearchParams(window.location.search);
 const idUrl = Url.get("id")
@@ -30,10 +32,7 @@ async function viewEvent(){
             
             console.log(data)
             editName.value = data.owner_name;
-            editImg.value = data.poster;
-            editAtracoes.value = data.attractions;
-            editDescricao.value = data.description;
-            editData.value = data.scheduled;
+            editEmail.value = data.owner_email;
             editTickets.value = data.number_tickets;
 
             console.log(response)
@@ -53,14 +52,11 @@ newForm.onsubmit = async (event) => {
 
         const newEvent = {
             "name": inpNome.value,
-            "poster": inpImg.value,
-            "attractions":inpAtracoes.value.split(","),
-            "description": inpDescricao.value,
-            "scheduled": new Date(inpData.value).toISOString(),
+            "email": inpEmail.value,
             "number_tickets": inpTickets.value,
         }; console.log(newEvent)
     
-    const responseEdit = await fetch(`https://xp41-soundgarden-api.herokuapp.com/events/${idUrl}`,{
+    const responseEdit = await fetch(`https://xp41-soundgarden-api.herokuapp.com/bookings/${idUrl}`,{
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -70,8 +66,8 @@ newForm.onsubmit = async (event) => {
     
     });
     console.log(responseEdit);
-    alert("Editato com Sucesso!")
-    window.location.href = "admin.html";
+    alert("Reversa Editada! API não permite PUT")
+    window.location.href = "reservas.html";
         
     } catch (error) {
         console.log("Ta dando pau " + error)
