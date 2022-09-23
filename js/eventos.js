@@ -20,7 +20,7 @@ async function viewEvent() {
             <h2>${event.name}</h2>
             <h4>${event.attractions}</h4>
             <p>${event.description}</p>
-            <a href="#" class="btn btn-primary">reservar ingresso</a>
+            <button class="btn btn-primary">reservar ingresso</button>
         </article>`;
         console.log(clEvento)
 
@@ -29,6 +29,7 @@ async function viewEvent() {
         
             
         });
+
     } catch (error) {
         console.log("ta dando pau no eventos " + error)
         
@@ -36,4 +37,19 @@ async function viewEvent() {
     
 
 }
+
+
 viewEvent() 
+
+//ABRIR MODAL
+
+
+
+
+
+//FECHAR O MODAL
+let modal1 = document.getElementById('#modal1')
+let exitreserva = document.getElementById('submit')
+exitreserva.onclick = () => {
+modal1.style.display = "none"
+}
