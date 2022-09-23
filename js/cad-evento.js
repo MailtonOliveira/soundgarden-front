@@ -9,7 +9,7 @@ const newForm = document.querySelector(".col-6");
 newForm.addEventListener("submit", cadEvent)
 
 async function cadEvent(event){
-    event.preventDefault()
+    
 
     try{      
         console.log(inpData.value)
@@ -41,6 +41,6 @@ async function cadEvent(event){
     console.log("ta dando pau no cadastro " + error)
     alert("Favor preencher todos os campos")
     };
-    
+    event.preventDefault()
 }
 
