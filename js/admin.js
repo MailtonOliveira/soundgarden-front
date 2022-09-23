@@ -1,9 +1,4 @@
-
-
-// btEvento.addEventListener("click", listEvents)
-
 async function listEvents(event) {
-    // event.preventDefault();
     try {
         const response = await fetch("https://xp41-soundgarden-api.herokuapp.com/events", {
             headers: {
@@ -13,7 +8,6 @@ async function listEvents(event) {
 
         });
         const data = await response.json();
-
         const btEvento = document.querySelector("tbody")
 
         data.forEach((event) => {
@@ -23,22 +17,16 @@ async function listEvents(event) {
             <td>${event.name}</td>
             <td>${event.attractions}</td>
             <td>
-                <a href="reservas.html" class="btn btn-dark">ver reservas</a>
+                <a href="reservas-id.html?id=${event._id}" class="btn btn-dark">ver reservas</a>
                 <a href="editar-evento.html?id=${event._id}" class="btn btn-secondary">editar</a>
                 <a href="excluir-evento.html?id=${event._id}" class="btn btn-danger">excluir</a>
             </td>
         </tr>`;
-
-        btEvento.innerHTML += html
-        // console.log(html)
-            
-        });
-
-        
+        btEvento.innerHTML += html               
+        });        
         
     } catch (error) {
-        console.log("Ta dando pau " + error)
-        
+        console.log("Ta dando pau " + error)   
     }
 } 
 listEvents()
