@@ -9,7 +9,7 @@ const newForm = document.querySelector(".col-6");
 newForm.addEventListener("submit", cadEvent)
 
 async function cadEvent(event){
-    event.preventDefault()
+    event.preventDefault()   
 
     try{      
         console.log(inpData.value)

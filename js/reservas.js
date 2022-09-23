@@ -27,6 +27,7 @@ async function listReservas() {
         const btReservas = document.querySelector("tbody")
 
         data.forEach((event) => {
+
             const html = `<tr>
                 <th scope="row">1</th>
                 <td>${event.owner_name}</td>
@@ -38,6 +39,7 @@ async function listReservas() {
                 </td>
             </tr>`;       
             btReservas.innerHTML += html          
+
         });   
 
         const botoesDelete = document.querySelectorAll(".btn.btn-danger")
