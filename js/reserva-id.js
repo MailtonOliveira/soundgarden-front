@@ -8,7 +8,7 @@ async function deleteReserva(reservaId) {
             redirect: 'follow'
         });
         alert("Reserva excluída com sucesso!")
-        window.location.href = `reservas-id.html?id=${idUrl}`;
+        window.location.href = `admin.html?id=${idUrl}`;
     } catch (error) {
         alert("Não foi possível excluir reserva")
         console.log(error)
