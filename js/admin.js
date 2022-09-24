@@ -17,7 +17,7 @@ async function listEvents(event) {
             <td>${event.name}</td>
             <td>${event.attractions}</td>
             <td>
-                <a href="reservas-id.html?id=${event._id}" class="btn btn-dark">ver reservas</a>
+                <a href="reservas.html?id=${event._id}" class="btn btn-dark">ver reservas</a>
                 <a href="editar-evento.html?id=${event._id}" class="btn btn-secondary">editar</a>
                 <a href="excluir-evento.html?id=${event._id}" class="btn btn-danger">excluir</a>
             </td>
