@@ -20,7 +20,7 @@ async function viewEvent() {
             <h2>${event.name} - ${new Date(event.scheduled).toLocaleDateString()}</h2>
             <h4>${event.attractions}</h4>
             <p>${event.description}</p>
-            <button class="btn btn-primary">reservar ingresso</button>
+            <a onclick="acao()" class="btn btn-primary">reservar ingresso</a>
         </article>`;
 
             clEvento.innerHTML += cardEv
@@ -45,13 +45,18 @@ viewEvent()
 
 //ABRIR MODAL
 
-
-
-
-
-//FECHAR O MODAL
-let modal1 = document.getElementById('#modal1')
-let exitreserva = document.getElementById('submit')
-exitreserva.onclick = () => {
-modal1.style.display = "none"
+function acao (){
+    let modal1 = document.getElementById('modal1')
+    modal1.style.display = "block"
+    console.log(modal1)
 }
+
+
+
+
+let fechar = document.querySelector("#fechar")
+fechar.onclick = () =>{
+    modal1.style.display = "none"
+}
+
+
