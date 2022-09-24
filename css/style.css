@@ -59,7 +59,7 @@ footer nav ul li  {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    display: none;
 
 }
 
@@ -76,6 +76,8 @@ footer nav ul li  {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 370px;
+    margin-top: 130px;
     flex-direction: column;
     gap: 10px;
     width: 500px;
