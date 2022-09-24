@@ -89,19 +89,4 @@ form #textoreserva{
     color: #C2185B;
 }
 
-form input{
-    width: 80%;
-    border: 1px solid #b5b5b5;
-    color: #7c7c7c;
-    padding: 5px;
-    font-size: 14px;
-
-}
-
-form #submit{
-    background-color: #C2185B;
-    color: white;
-    width: 400px;
-    height: 35px;
-    border-style: none;
 }
