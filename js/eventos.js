@@ -1,6 +1,3 @@
-const Url = new URLSearchParams(window.location.search);
-const idUrl = Url.get("id")
-
 async function viewEvent() {
 
     try {
@@ -20,28 +17,16 @@ async function viewEvent() {
             <h2>${event.name} - ${new Date(event.scheduled).toLocaleDateString()}</h2>
             <h4>${event.attractions}</h4>
             <p>${event.description}</p>
-            <a onclick="acao()" class="btn btn-primary">reservar ingresso</a>
-        </article>`;
-
+            <a onclick="acao()"class="btn btn-primary">reservar ingresso</a>
+            </article>`;
             clEvento.innerHTML += cardEv
         });
-
-        
 
     } catch (error) {
         console.log(error)
     }
 }
-
-
-
 viewEvent() 
-
-// const botoesModal = document.querySelectorAll(".btn.btn-primary")
-//         botoesModal.forEach((botao) => {
-//             const id = botao.getAttribute("id")
-//             botao.addEventListener("click", function () {
-//                 modal1.style.display = "block"(id)
 
 //ABRIR MODAL
 
