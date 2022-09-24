@@ -17,13 +17,29 @@ async function viewEvent() {
             <h2>${event.name} - ${new Date(event.scheduled).toLocaleDateString()}</h2>
             <h4>${event.attractions}</h4>
             <p>${event.description}</p>
-            <a href="#" class="btn btn-primary">reservar ingresso</a>
+            <button class="btn btn-primary">reservar ingresso</button>
         </article>`;
 
             clEvento.innerHTML += cardEv
         });
+
     } catch (error) {
         console.log(error)
     }
 }
+
+
 viewEvent() 
+
+//ABRIR MODAL
+
+
+
+
+
+//FECHAR O MODAL
+let modal1 = document.getElementById('#modal1')
+let exitreserva = document.getElementById('submit')
+exitreserva.onclick = () => {
+modal1.style.display = "none"
+}
